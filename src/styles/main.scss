@@ -1,2 +1,96 @@
 @import 'variables';
 
+body {
+  background-color: $colorBackground;
+
+  .train {
+    position: relative;
+    perspective: 800px;
+    width: 720px;
+    height: 160px;
+    margin: 100px auto;
+
+    .coach {
+      height: 5px;
+      width: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-style: preserve-3d;
+      transform: rotateY(20deg);
+
+      div[class^="face-"] {
+        position: absolute;
+        left: -360px;
+        top: -80px;
+        transform-style: preserve-3d;
+        background: $colorTrainLightGrey;
+      }
+
+      div[class^="face-ns-"] {
+        width: 720px;
+        height: 160px;
+
+        .upper-floor {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+        }
+
+        .lower-floor {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          background: $colorTrainDarkGrey;
+          border-top: solid 5px $colorInoui;
+
+          .class {
+            width: 10%;
+            margin: 0 10px;
+            text-align: right;
+            font-size: 50px;
+            font-family: sans-serif;
+            font-weight: 900;
+            color: white;
+          }
+        }
+
+        .window {
+          margin: 10px;
+          height: 40px;
+          width: 10%;
+          border-radius: 5px;
+          background: $colorTrainWindow;
+        }
+      }
+
+      .face-ns-1 {
+        transform: rotateY(0) translateZ(40px);
+      }
+
+      .face-ns-2 {
+        transform: rotateY(180deg) translateZ(40px);
+      }
+
+      div[class^="face-eo-"] {
+        width: 80px;
+        height: 160px;
+        background-color: black;
+      }
+
+      .face-eo-1 {
+        right: 0;
+        transform: rotateY(90deg) translateZ(40px);
+      }
+
+      .face-eo-2 {
+        left: 0;
+        transform: rotateY(270deg) translateZ(40px);
+      }
+    }
+  }
+}
