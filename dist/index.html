@@ -8,46 +8,66 @@
 	<title>TGV</title>
 </head>
 <body>
-	<div class="train">
-		<div class="coach">
-			<div class="face-ns-1">
-				<div class="upper-floor">
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
+	<section class="view">
+		<div class="train">
+			<div class="couch">
+				<div class="face-ns-1">
+					<div class="upper-floor">
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+					</div>
+					<div class="lower-floor">
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="class">
+							<div class="display">
+								TGV 6669
+								<div class="sliding-text animation">Lyon Part-Dieu - Lyon Perrache</div>
+							</div>
+							2
+						</div>
+					</div>
 				</div>
-				<div class="lower-floor">
+				<div class="face-eo-1"></div>
+				<div class="face-ns-2">
+					<div class="upper-floor">
 						<div class="window"></div>
 						<div class="window"></div>
 						<div class="window"></div>
 						<div class="window"></div>
 						<div class="window"></div>
-					<div class="class">2</div>
-				</div>
-			</div>
-			<div class="face-eo-1">
-
-			</div>
-			<div class="face-ns-2">
-				<div class="upper-floor">
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-					<div class="window"></div>
-				</div>
-				<div class="lower-floor">
+						<div class="window"></div>
+					</div>
+					<div class="lower-floor">
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
+						<div class="window"></div>
 						<div class="class">2</div>
 					</div>
-			</div>
-			<div class="face-eo-2">
-					
+				</div>
+				<div class="face-eo-2"></div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<aside class="controls">
+		<h5 class="control-label">X</h5>
+		<input type="range" class="view-x" min="-180" max="180" step=".1"/>
+		<h5 class="control-label">Y</h5>
+		<input type="range" class="view-y" min="-180" max="180" step=".1"/>
+		<h5 class="control-label">Z</h5>
+		<input type="range" class="view-z" min="-180" max="180" step=".1"/>
+		<h5 class="control-label">Zoom</h5>
+		<input type="range" class="zoom" min=".1" max="10" step=".1"/>
+	</aside>
+	<script src="assets/js/main.min.js"></script>
 </body>
 </html>

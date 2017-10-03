@@ -1,27 +1,24 @@
-function up() {
-  document.querySelector('.iphone-container').classList.add('phoneupcl');
+const controls = document.querySelector('.controls')
+if (controls) {
+  const train = document.querySelector('.train')
+  const viewX = document.querySelector('.view-x')
+  const viewY = document.querySelector('.view-y')
+  const viewZ = document.querySelector('.view-z')
+  const zoom = document.querySelector('.zoom')
+
+  viewX.addEventListener('change', () => {
+    train.style.transform = 'rotateX(' + viewX.value + 'deg)'
+  })
+
+  viewY.addEventListener('change', () => {
+    train.style.transform = 'rotateY(' + viewY.value + 'deg)'
+  })
+
+  viewZ.addEventListener('change', () => {
+    train.style.transform = 'rotateZ(' + viewZ.value + 'deg)'
+  })
+
+  zoom.addEventListener('change', () => {
+    train.style.transform = 'scale(' + zoom.value + ')'
+  })
 }
-
-document.querySelector('.icon').addEventListener('click', up);
-
-var battery = window.navigator.getBattery().then(function(battery) {
-  document.querySelector('.bat-per').innerHTML=battery.level * 100 + ' %';
-  if (battery.level * 100 > 75) {
-    document.querySelector('.bat').innerHTML='<i class="fa fa-battery-full" aria-hidden="true"></i>';
-  }
-  else if (battery.level * 100 <= 75) {
-    document.querySelector('.bat').innerHTML='<i class="fa fa-battery-three-quarters" aria-hidden="true"></i>';
-  }
-  else if (battery.level * 100 <= 50) {
-    document.querySelector('.bat').innerHTML='<i class="fa fa-battery-half" aria-hidden="true"></i>';
-  }
-  else if (battery.level * 100 <= 25) {
-    document.querySelector('.bat').innerHTML='<i class="fa fa-battery-quarter" aria-hidden="true"></i>';
-  }
-  else {
-    document.querySelector('.bat').innerHTML='<i class="fa fa-battery-empty" aria-hidden="true"></i>';
-  }
-});
-
-var time = new Date().toLocaleTimeString('en-US', { hour12: false, hour: "numeric", minute: "numeric"});
-document.querySelector('.time').innerHTML=time;

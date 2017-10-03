@@ -1,96 +1,142 @@
 @import 'variables';
+@import 'keyframes';
 
 body {
   background-color: $colorBackground;
 
-  .train {
+  section.view {
     position: relative;
     perspective: 800px;
     width: 720px;
     height: 160px;
     margin: 100px auto;
 
-    .coach {
+    .train {
       height: 5px;
       width: 5px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform-style: preserve-3d;
-      transform: rotateY(20deg);
+      transform: rotateY(0deg);
+      display: inline-block;
 
-      div[class^="face-"] {
-        position: absolute;
-        left: -360px;
-        top: -80px;
-        transform-style: preserve-3d;
-        background: $colorTrainLightGrey;
-      }
+      .couch {
 
-      div[class^="face-ns-"] {
-        width: 720px;
-        height: 160px;
-
-        .upper-floor {
-          width: 100%;
-          height: 60px;
-          display: flex;
-          align-content: center;
-          justify-content: center;
+        div[class^="face-"] {
+          position: absolute;
+          left: -360px;
+          top: -80px;
+          transform-style: preserve-3d;
+          background: $colorTrainLightGrey;
         }
 
-        .lower-floor {
-          width: 100%;
-          height: 60px;
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          background: $colorTrainDarkGrey;
-          border-top: solid 5px $colorInoui;
+        div[class^="face-ns-"] {
+          width: 720px;
+          height: 160px;
 
-          .class {
+          .upper-floor {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+          }
+
+          .lower-floor {
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            background: $colorTrainDarkGrey;
+            border-top: solid 5px $colorInoui;
+
+            .class {
+              position: relative;
+              width: 10%;
+              margin: 0 10px;
+              text-align: right;
+              font-size: 50px;
+              font-family: sans-serif;
+              font-weight: 900;
+              color: white;
+
+              .display {
+                position: absolute;
+                top: 10px;
+                background-color: $colorTrainDisplayBg;
+                border-radius: 5px;
+                width: 40%;
+                height: 10px;
+                font-size: 4px;
+                padding: 2px;
+                text-align: left;
+                overflow: hidden;
+                color: $colorTrainDisplayColor;
+
+                .sliding-text {
+                  width: 100px;
+                  margin-left: calc(100% + 10px);
+
+                  &.animation {
+                    animation-name: slideText;
+                    animation-duration: 7s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                  }
+                }
+              }
+            }
+          }
+
+          .window {
+            margin: 10px;
+            height: 40px;
             width: 10%;
-            margin: 0 10px;
-            text-align: right;
-            font-size: 50px;
-            font-family: sans-serif;
-            font-weight: 900;
-            color: white;
+            border-radius: 5px;
+            background: $colorTrainWindow;
           }
         }
 
-        .window {
-          margin: 10px;
-          height: 40px;
-          width: 10%;
-          border-radius: 5px;
-          background: $colorTrainWindow;
+        .face-ns-1 {
+          transform: rotateY(0) translateZ(50px);
+        }
+
+        .face-ns-2 {
+          transform: rotateY(180deg) translateZ(50px);
+        }
+
+        div[class^="face-eo-"] {
+          width: 100px;
+          height: 160px;
+          background-color: black;
+        }
+
+        .face-eo-1 {
+          transform: rotateY(90deg) translateZ(670px);
+        }
+
+        .face-eo-2 {
+          transform: rotateY(-90deg) translateZ(50px);
         }
       }
+    }
+  }
 
-      .face-ns-1 {
-        transform: rotateY(0) translateZ(40px);
-      }
+  aside.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
-      .face-ns-2 {
-        transform: rotateY(180deg) translateZ(40px);
-      }
+    .control-label {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 10px 0;
+    }
 
-      div[class^="face-eo-"] {
-        width: 80px;
-        height: 160px;
-        background-color: black;
-      }
-
-      .face-eo-1 {
-        right: 0;
-        transform: rotateY(90deg) translateZ(40px);
-      }
-
-      .face-eo-2 {
-        left: 0;
-        transform: rotateY(270deg) translateZ(40px);
-      }
+    input[type="range"] {
+      display: block;
+      margin: 10px;
     }
   }
 }
