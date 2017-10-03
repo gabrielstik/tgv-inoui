@@ -221,14 +221,37 @@ section[class^="couch-"] {
       }
     }
 
-    .door {
+    .behind-door {
       position: absolute;
-      left: 580px;
-      border: solid 2px $colorTrainLightGrey;
-      bottom: 0;
       height: 98px;
       width: 50px;
+      border: solid 2px $colorTrainLightGrey;
+      bottom: 0;
+      left: 580px;
+      background: $colorTrainDarkGrey;
+    }
+
+    .door {
+      position: absolute;
+      left: 582px;
+      bottom: 0;
+      height: 100px;
+      width: 50px;
       background: $colorTrainDoor;
+
+      &.animation {
+        animation-name: doorToggle;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+
+        @keyframes doorToggle {
+          100% {
+            transform: translateX(50px);
+          }
+        }
+      }
 
       .door-window {
         height: 40px;
