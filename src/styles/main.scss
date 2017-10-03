@@ -1,6 +1,5 @@
 body {
   background-color: $colorBackground;
-  width: 10000px;
 
   section.view {
     position: relative;
@@ -16,7 +15,7 @@ body {
       transform-style: preserve-3d;
       display: flex;
       /* mano modifs */
-      transform: rotateY(60deg);
+      transform: rotateY(50deg);
       
       &.animation {
         animation-name: rotateTrain;
