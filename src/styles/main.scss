@@ -1,5 +1,4 @@
 @import 'variables';
-@import 'keyframes';
 
 body {
   background-color: $colorBackground;
@@ -20,6 +19,19 @@ body {
       transform-style: preserve-3d;
       transform: rotateY(0deg);
       display: inline-block;
+      
+      &.animation {
+        animation-name: rotateTrain;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes rotateTrain {
+          100% {
+            transform: rotateY(-360deg);
+          }
+        }
+      }
 
       .couch {
 
@@ -34,42 +46,40 @@ body {
         div[class^="face-ns-"] {
           width: 720px;
           height: 160px;
+          border-left: solid 5px $colorTrainDarkGrey;
+          border-right: solid 5px $colorTrainDarkGrey;
 
           .upper-floor {
             width: 100%;
             height: 60px;
-            display: flex;
-            align-content: center;
-            justify-content: center;
           }
 
           .lower-floor {
             width: 100%;
-            display: flex;
-            align-content: center;
-            justify-content: center;
+            height: 60px;
             background: $colorTrainDarkGrey;
             border-top: solid 5px $colorInoui;
 
             .class {
+              vertical-align: top;
               position: relative;
-              width: 10%;
+              display: inline-block;
+              width: 30px;
               margin: 0 10px;
-              text-align: right;
-              font-size: 50px;
+              text-align: center;
+              font-size: 30px;
               font-family: sans-serif;
               font-weight: 900;
               color: white;
 
               .display {
-                position: absolute;
-                top: 10px;
                 background-color: $colorTrainDisplayBg;
                 border-radius: 5px;
-                width: 40%;
+                width: 30px;
                 height: 10px;
                 font-size: 4px;
                 padding: 2px;
+                margin-top: 10px;
                 text-align: left;
                 overflow: hidden;
                 color: $colorTrainDisplayColor;
@@ -83,6 +93,12 @@ body {
                     animation-duration: 7s;
                     animation-iteration-count: infinite;
                     animation-timing-function: linear;
+
+                    @keyframes slideText {
+                      100% {
+                        margin-left: calc(-200% - 40px);
+                      }
+                    }
                   }
                 }
               }
@@ -90,11 +106,48 @@ body {
           }
 
           .window {
-            margin: 10px;
-            height: 40px;
-            width: 10%;
+            display: inline-block;
+            margin: 25px 10px auto 10px;
+            height: 30px;
+            width: 60px;
             border-radius: 5px;
             background: $colorTrainWindow;
+            
+            &.small {
+              width: 30px;
+            }
+          }
+
+          .grid {
+            display: inline-block;
+            margin: 25px 10px auto 10px;
+            height: 30px;
+            width: 84px;
+            border-radius: 5px;
+            border: solid 1px black;
+
+            &.small {
+              width: 30px;
+            }
+          }
+
+          .door {
+            position: absolute;
+            left: 580px;
+            border: solid 2px $colorTrainLightGrey;
+            bottom: 0;
+            height: 98px;
+            width: 50px;
+            background: $colorTrainDoor;
+
+            .door-window {
+              height: 40px;
+              width: 20px;
+              margin-top: 20px;
+              margin-left: 10px;
+              border-radius: 5px;
+              background: $colorTrainWindow;
+            }
           }
         }
 
@@ -109,34 +162,17 @@ body {
         div[class^="face-eo-"] {
           width: 100px;
           height: 160px;
-          background-color: black;
+          background-color: $colorTrainDarkGrey;
         }
 
         .face-eo-1 {
-          transform: rotateY(90deg) translateZ(670px);
+          transform: rotateY(90deg) translateZ(680px);
         }
 
         .face-eo-2 {
           transform: rotateY(-90deg) translateZ(50px);
         }
       }
-    }
-  }
-
-  aside.controls {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-
-    .control-label {
-      font-family: sans-serif;
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    input[type="range"] {
-      display: block;
-      margin: 10px;
     }
   }
 }
