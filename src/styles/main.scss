@@ -6,9 +6,7 @@ body {
   section.view {
     position: relative;
     perspective: 800px;
-    width: 720px;
-    height: 160px;
-    margin: 100px auto;
+    margin: 200px auto;
 
     .train {
       height: 5px;
@@ -17,8 +15,9 @@ body {
       top: 50%;
       left: 50%;
       transform-style: preserve-3d;
-      transform: rotateY(0deg);
-      display: inline-block;
+      display: flex;
+      /* mano modifs */
+      transform: rotateY(36deg) translate(500px);
       
       &.animation {
         animation-name: rotateTrain;
@@ -33,7 +32,26 @@ body {
         }
       }
 
-      .couch {
+      section[class^="couch-"] {
+        width: 780px;
+        height: 170px;
+        transform-style: preserve-3d;
+
+        &.couch-2 {
+          transform: translateX(-720px);
+        }
+
+        &.couch-3 {
+          transform: translateX(0);
+        }
+
+        &.couch-4 {
+          transform: translateX(720px);
+        }
+
+        &.couch-5 {
+          transform: translateX(1440px);
+        }
 
         div[class^="face-"] {
           position: absolute;
