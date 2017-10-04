@@ -129,6 +129,16 @@
         }
       }
 
+      .roof-top {
+        position: absolute;
+        top: -130px;
+        left: 0;
+        height: 40px;
+        width: 720px;
+        background: $colorTrainRoof;
+        transform: rotateX(80deg) translateZ(-113px) translateY(-14px);
+      }
+
       .upper-floor {
         width: 100%;
         height: 60px;
