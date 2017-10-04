@@ -1,0 +1,8 @@
+.rails {
+  position: absolute;
+  width: 100000px;
+  height: 60px;
+  border-top: solid 5px $colorRails;
+  border-bottom: solid 5px $colorRails;
+  transform: rotateX(90deg) translateX(-50000px) translateZ(-50px);
+}

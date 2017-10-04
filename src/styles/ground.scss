@@ -1,0 +1,8 @@
+.ground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(50vh + 190px);
+  width: 100vw;
+  background-color: $colorGround;
+}

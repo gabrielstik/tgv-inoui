@@ -1,31 +1,32 @@
 body {
   background-color: $colorBackground;
+  overflow: hidden;
 
   section.view {
     position: relative;
     perspective: 800px;
     margin: 200px auto;
 
-    .train {
+    .world {
       height: 5px;
       width: 5px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform-style: preserve-3d;
-      display: flex;
       /* mano modifs */
-      transform: rotateY(50deg);
+      transform: rotateY(130deg) translateX(-5000px) translateY(0);
       
       &.animation {
         animation-name: rotateTrain;
         animation-duration: 5s;
+        animation-delay: 2s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
 
         @keyframes rotateTrain {
           100% {
-            transform: rotateY(60deg);
+            transform: rotateY(110deg) translateX(2000px) translateY(500px);
           }
         }
       }
