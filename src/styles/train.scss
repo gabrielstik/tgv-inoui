@@ -332,7 +332,37 @@
       transform: rotateZ(62deg) rotateY(90deg) translateZ(90px) translateY(-180px);
       border-radius: 60px 60px 0px 0px / 300px 300px 0px 0px;
 
+      .top-light.front {
+        position: absolute;
+        top: 30px;
+        left: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $colorTrainFrontLight;
+      }
+
+      .bottom-lights.front {
+        position: absolute;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        top: 177px;
+        left: calc(50% - 60px);
+
+        div {
+          margin: 0 20px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $colorTrainFrontLight;
+        }
+      }
+
       .window {
+        position: absolute;
+        top: 70px;
+        left: calc(50% - 30px);
         width: 60px;
         height: 80px;
         margin: auto;
