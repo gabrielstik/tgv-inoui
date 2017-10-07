@@ -283,12 +283,16 @@
 
     .face-ns-1 {
       transform: rotateY(0) translateZ(50px);
+
+      &.returned {
+        transform: scaleX(-1) translateZ(50px);
+      }
     }
 
     .face-ns-2 {
       transform: rotateY(180deg) translateZ(50px);
 
-      &.engine {
+      &.returned {
         transform: scaleZ(-1) translateZ(50px);
       }
     }
