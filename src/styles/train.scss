@@ -61,74 +61,6 @@
       width: 720px;
       height: 160px;
 
-      &.engine {
-        background-color: $colorTrainWhite;
-        overflow: hidden;
-
-        &.engine-eo-1 {
-          border-radius: 0 400px 200px 0 / 0 140px 40px 25px;
-          border-right: solid 5px $colorInoui;
-        }
-
-        &.engine-eo-2 {
-          border-radius: 400px 0px 0px 200px / 140px 0px 0px 40px;
-          border-right: solid 5px $colorInoui;
-        }
-
-        .upper-grid-paint {
-          width: 200px;
-          height: 5px;
-          margin-top: 60px;
-          background-color: $colorInoui;
-        }
-          
-        .grid-engine {
-          width: 500px;
-          height: 60px;
-          background-color: $colorTrainDarkGrey;
-        }
-
-        .grey-polygon {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 160px;
-          width: 300px;
-          z-index: -1;
-
-          .rectangle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 160px;
-            width: 100px;
-            background-color: $colorTrainLightGrey;
-          }
-
-          .skewed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 160px;
-            width: 300px;
-            background-color: $colorTrainLightGrey;
-            transform: skew(45deg);
-          }
-        }
-
-        .logo {
-          position: absolute;
-          bottom: 40px;
-          right: 100px;
-          z-index: 10;
-          width: 100px;
-          height: 40px;
-          background: url('../img/logo.png');
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-
       .roof-top {
         position: absolute;
         top: -130px;
@@ -150,6 +82,23 @@
           display: flex;
           justify-content: center;
           align-content: center;
+        }
+
+        &.engine {
+          width: 450px;
+          border: none;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100px;
+            width: 200px;
+            height: 60px;
+            background-color: $colorTrainLightGrey;
+            transform: skew(60deg);
+            border-radius: 0 40px;
+          }
         }
       }
 
@@ -206,6 +155,22 @@
             }
           }
         }
+
+        &.engine {
+          width: 550px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 59px;
+            right: 64px;
+            width: 200px;
+            height: 70px;
+            background-color: $colorTrainLightGrey;
+            transform: skew(60deg);
+            border-radius: 0 0 100px 0;
+          }
+        }
       }
 
       .under-floor {
@@ -214,6 +179,23 @@
         background: $colorTrainLightGrey;
         border-right: solid 5px $colorTrainDarkGrey;
         transform: rotateX(-10deg) translateZ(-10px);
+
+        &.engine {
+          width: 550px;
+          border-right: none;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -95px;
+            width: 200px;
+            height: 40px;
+            background-color: $colorTrainLightGrey;
+            transform: skew(-60deg);
+            border-radius: 100px 100px 100px 0;
+          }
+        }
       }
 
       .window {
@@ -291,7 +273,7 @@
         left: 0;
         width: 720px;
         height: 120px;
-        background-color: $colorTrainShadow;
+        background: $colorTrainShadow;
         transform: rotateX(-90deg) skew(-60deg);
         transform-origin: bottom;
         opacity: .5;
@@ -305,6 +287,10 @@
 
     .face-ns-2 {
       transform: rotateY(180deg) translateZ(50px);
+
+      &.engine {
+        transform: scaleZ(-1) translateZ(50px);
+      }
     }
 
     div[class^="face-eo-"] {
@@ -319,5 +305,19 @@
     .face-eo-2 {
       transform: rotateY(-90deg) translateZ(50px);
     }
+
+    &.engine {
+
+      
+    }
   }
+}
+
+.rails {
+  position: absolute;
+  width: 100000px;
+  height: 60px;
+  border-top: solid 5px $colorRails;
+  border-bottom: solid 5px $colorRails;
+  transform: rotateX(90deg) translateX(-50000px) translateZ(-50px);
 }

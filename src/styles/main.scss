@@ -1,13 +1,14 @@
 body {
   background-color: $colorBackground;
   overflow: hidden;
+  margin: 0;
 
   section.view {
     position: relative;
     perspective: 800px;
     margin: 200px auto;
 
-    .world {
+    .dynamic-elements {
       height: 5px;
       width: 5px;
       position: absolute;
@@ -15,17 +16,21 @@ body {
       left: 50%;
       transform-style: preserve-3d;
       /* mano modifs */
-      transform: rotateY(50deg) translateY(300px);
+      transform: rotateY(0deg) translateX(-3500px);
       
       &.animation {
         animation-name: rotateTrain;
         animation-duration: 10s;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-timing-function: ease-in-out;
 
         @keyframes rotateTrain {
+          50% {
+            transform: rotateY(90deg) translateY(200px);
+          }
+
           100% {
-            transform: rotateY(160deg) translateX(3000px) translateY(400px);
+            transform: rotateY(30deg) translateY(0);
           }
         }
       }
