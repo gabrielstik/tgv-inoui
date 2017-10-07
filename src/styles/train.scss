@@ -322,17 +322,33 @@
       }
     }
 
-    div[class^="face-eo-"] {
-      width: 100px;
-      height: 160px;
+    .face-e-1 {
+      width: 90px;
+      height: 200px;
+      background: $colorTrainDarkGrey;
+      border-left: solid 5px $colorInoui;
+      border-right: solid 5px $colorInoui;
+      transform-origin: top;
+      transform: rotateZ(62deg) rotateY(90deg) translateZ(90px) translateY(-180px);
+      border-radius: 60px 60px 0px 0px / 300px 300px 0px 0px;
+
+      .window {
+        width: 60px;
+        height: 80px;
+        margin: auto;
+        background: $colorTrainWindow;
+      }
     }
 
-    .face-eo-1 {
-      transform: rotateY(90deg) translateZ(680px);
-    }
-
-    .face-eo-2 {
-      transform: rotateY(-90deg) translateZ(50px);
+    .face-e-2 {
+      width: 90px;
+      height: 50px;
+      background: $colorTrainDarkGrey;
+      border-left: solid 5px $colorInoui;
+      border-right: solid 5px $colorInoui;
+      transform-origin: top;
+      transform: rotateZ(40deg) rotateY(90deg) translateZ(76px) translateY(50px);
+      border-radius: 0px 0px 40px 40px;
     }
   }
 }
