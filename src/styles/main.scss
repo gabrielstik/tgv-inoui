@@ -16,21 +16,17 @@ body {
       left: 50%;
       transform-style: preserve-3d;
       /* mano modifs */
-      transform: rotateY(57deg) translateX(3500px) rotateZ(0deg);
+      transform: rotateY(120deg) translateX(2000px) translateY(300px);
       
       &.animation {
         animation-name: rotateTrain;
-        animation-duration: 10s;
+        animation-duration: 5s;
         animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: linear;
 
         @keyframes rotateTrain {
-          50% {
-            transform: rotateY(90deg) translateY(200px);
-          }
-
           100% {
-            transform: rotateY(30deg) translateY(0);
+            transform: rotateY(180deg) translateX(8000px) translateY(300px);
           }
         }
       }
