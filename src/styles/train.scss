@@ -322,7 +322,7 @@
       }
     }
 
-    .face-e-1 {
+    .face-1-e {
       width: 90px;
       height: 200px;
       background: $colorTrainDarkGrey;
@@ -332,7 +332,11 @@
       transform: rotateZ(62deg) rotateY(90deg) translateZ(90px) translateY(-180px);
       border-radius: 60px 60px 0px 0px / 300px 300px 0px 0px;
 
-      .top-light.front {
+      &.returned {
+        transform: rotateZ(-62deg) rotateY(-90deg) translateZ(-200px) translateY(380px);
+      }
+
+      .top-light {
         position: absolute;
         top: 30px;
         left: calc(50% - 10px);
@@ -340,9 +344,13 @@
         height: 20px;
         border-radius: 50%;
         background: $colorTrainFrontLight;
+
+        &.back {
+          background: $colorTrainBackLight;
+        }
       }
 
-      .bottom-lights.front {
+      .bottom-lights {
         position: absolute;
         display: flex;
         align-content: center;
@@ -350,12 +358,20 @@
         top: 177px;
         left: calc(50% - 60px);
 
-        div {
+        &.front div {
           margin: 0 20px;
           width: 20px;
           height: 20px;
           border-radius: 50%;
           background: $colorTrainFrontLight;
+        }
+
+        &.back div {
+          margin: 0 20px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $colorTrainBackLight;
         }
       }
 
@@ -370,7 +386,7 @@
       }
     }
 
-    .face-e-2 {
+    .face-2-e {
       width: 90px;
       height: 50px;
       background: $colorTrainDarkGrey;
@@ -379,15 +395,10 @@
       transform-origin: top;
       transform: rotateZ(40deg) rotateY(90deg) translateZ(76px) translateY(50px);
       border-radius: 0px 0px 40px 40px;
+
+      &.returned {
+        transform: rotateZ(-40deg) rotateY(-90deg) translateZ(-401px) translateY(458px);
+      }
     }
   }
-}
-
-.rails {
-  position: absolute;
-  width: 100000px;
-  height: 60px;
-  border-top: solid 5px $colorRails;
-  border-bottom: solid 5px $colorRails;
-  transform: rotateX(90deg) translateX(-50000px) translateZ(-50px);
 }
