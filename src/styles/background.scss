@@ -1,0 +1,17 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .sky {
+    height: 200px;
+    background: $colorSky;
+  }
+  
+  .earth-ground {
+    height: calc(100% - 200px);
+    background: $colorGround;
+  }
+}
