@@ -3,6 +3,7 @@
   .catenary-carriers {
 
     div[class^="catenary-carrier-"] {
+      will-change: transform;
       position: absolute;
       top: -160px;
       width: 600px;
@@ -10,10 +11,10 @@
       border-top: solid 5px $colorCatenaryCarrier;
       border-left: solid 5px $colorCatenaryCarrier;
       border-right: solid 5px $colorCatenaryCarrier;
-      animation-name: catenaries;
-      animation-duration: .2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
+      // animation-name: catenaries;
+      // animation-duration: .2s;
+      // animation-iteration-count: infinite;
+      // animation-timing-function: linear;
 
       @keyframes catenaries {
         100% {

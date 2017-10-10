@@ -400,5 +400,29 @@
         transform: rotateZ(-40deg) rotateY(-90deg) translateZ(-401px) translateY(458px);
       }
     }
+
+    .pantograph {
+      position: absolute;
+      top: -200px;
+      left: -200px;
+
+      &.returned {
+        left: 200px;
+      }
+
+      .lower-part {
+        width: 40px;
+        height: 60px;
+        border: solid 5px $colorTrainPantograph;
+        transform: rotateY(90deg) rotateX(45deg) translateY(-18px);
+      }
+
+      .upper-part {
+        width: 40px;
+        height: 60px;
+        border: solid 5px $colorTrainPantograph;
+        transform: rotateY(90deg) rotateX(-45deg)translateY(18px);
+      }
+    }
   }
 }

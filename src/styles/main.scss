@@ -16,7 +16,7 @@ body {
       left: 50%;
       transform-style: preserve-3d;
       /* mano modifs */
-      transform: rotateY(60deg) translateX(-2500px) translateY(0);
+      transform: rotateY(60deg) translateX(-3700px) translateY(200px);
       
       &.animation {
         animation-name: rotateTrain;
