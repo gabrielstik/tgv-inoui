@@ -142,9 +142,8 @@
 
             .sliding-text {
               width: 100px;
-              margin-left: calc(100% + 10px);
 
-              &.animation {
+              &.animation-off {
                 animation-name: slideText;
                 animation-duration: 7s;
                 animation-iteration-count: infinite;
@@ -247,7 +246,7 @@
         width: 50px;
         background: $colorTrainDoor;
 
-        &.animation {
+        &.animation-off {
           animation-name: doorToggle;
           animation-duration: 2s;
           animation-timing-function: ease-in-out;

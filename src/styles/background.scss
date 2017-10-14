@@ -8,10 +8,18 @@
   .sky {
     height: 200px;
     background: $colorSky;
+
+    &.studio {
+
+    }
   }
   
   .earth-ground {
     height: calc(100% - 200px);
     background: $colorGround;
+
+    &.studio {
+      
+    }
   }
 }
