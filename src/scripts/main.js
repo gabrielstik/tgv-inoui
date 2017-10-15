@@ -2,7 +2,7 @@ const launch = document.querySelector('.launch button')
 const equalizer = document.querySelector('.equalizer')
 const equalizerBars = document.querySelectorAll('.equalizer [class^="bar-"]')
 
-const header = document.querySelector('header')
+const header = docment.querySelector('header')
 const sncfLogo = document.querySelector('footer img')
 const background = document.querySelector('.background')
 const train = document.querySelector('.dynamic-elements')
