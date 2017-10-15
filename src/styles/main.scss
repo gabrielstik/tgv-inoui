@@ -6,7 +6,6 @@ body {
   section.view {
     position: relative;
     perspective: 800px;
-    margin: 200px auto;
 
     .dynamic-elements {
       height: 5px;
@@ -16,7 +15,8 @@ body {
       left: 50%;
       transform-style: preserve-3d;
       /* mano modifs */
-      transform: rotateY(60deg) translateX(-3700px) translateY(200px);
+      transform: rotateY(0deg) translateX(0) translateY(200px);
+      transition: transform 10s linear;
       
       &.animation {
         animation-name: rotateTrain;

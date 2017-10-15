@@ -1,0 +1,27 @@
+.move-left {
+  position: absolute;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  width: 45vw;
+  height: 100vh;
+  cursor: w-resize;
+
+  &:hover ~ .dynamic-elements {
+    transform: rotateY(0deg) translateX(3700px) translateY(200px);
+  }
+}
+
+.move-right {
+  position: absolute;
+  z-index: 100000;
+  right: 0;
+  top: 0;
+  width: 45vw;
+  height: 100vh;
+  cursor: e-resize;
+
+  &:hover ~ .dynamic-elements {
+    transform: rotateY(0deg) translateX(-3700px) translateY(200px);
+  }
+}
