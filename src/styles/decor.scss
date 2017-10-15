@@ -3,7 +3,7 @@
   .catenary-carriers {
 
     div[class^="catenary-carrier-"] {
-      display: none;
+      opacity: 0;
       will-change: transform;
       position: absolute;
       top: -160px;
@@ -12,11 +12,11 @@
       border-top: solid 5px $colorCatenaryCarrier;
       border-left: solid 5px $colorCatenaryCarrier;
       border-right: solid 5px $colorCatenaryCarrier;
-      
-      .speeding {
-        display: block;
+
+      &.animation {
         animation-name: catenaries;
-        animation-duration: .2s;
+        animation-duration: 1s;
+        animation-delay: 0s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
 
@@ -25,6 +25,10 @@
             transform: rotateY(90deg) translateZ(-2000px);
           }
         }
+      }
+
+      &.actives {
+        opacity: 1;
       }
 
       &.catenary-carrier-1 {
