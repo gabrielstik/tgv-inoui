@@ -12,25 +12,47 @@ body {
       height: 1px;
       width: 1px;
       position: absolute;
+      margin-top: 200px;
       top: 50%;
       left: 50%;
       transform-style: preserve-3d;
       /* mano modifs */
-      transform: rotateY(0deg) translateX(0) translateY(200px);
+      transform: rotateY(0deg) translateX(0) translateY(0);
       transition: transform 10s linear;
       
       &.animation {
         animation-name: rotateTrain;
         animation-duration: 10s;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
 
         @keyframes rotateTrain {
           100% {
-            transform: rotateY(70deg) translateX(15000px) translateY(600px);
+            transform: rotateY(80deg) translateX(3000px) translateY(250px);
           }
         }
       }
     }
+  }
+}
+
+.disable {
+  animation-name: animDisable;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+
+  @keyframes animDisable {
+    100% {opacity: 0;}
+  }
+}
+
+.enable {
+  animation-name: animEnable;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+
+  @keyframes animEnable {
+    100% {opacity: 1;}
   }
 }

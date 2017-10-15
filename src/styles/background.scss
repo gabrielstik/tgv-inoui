@@ -1,0 +1,19 @@
+.background {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+
+  .sky {
+    height: 150px;
+    background: $colorSky;
+  }
+
+  .ground {
+    height: calc(100% - 150px);
+    background: $colorGround;
+  }
+}

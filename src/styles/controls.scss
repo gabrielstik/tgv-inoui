@@ -3,13 +3,13 @@
   z-index: 10;
   left: 0;
   top: 0;
-  width: 45vw;
+  width: 50vw;
   height: 300px;
   margin-top: 70px;
   cursor: w-resize;
 
   &:hover ~ .dynamic-elements {
-    transform: rotateY(0deg) translateX(3700px) translateY(200px);
+    transform: rotateY(0deg) translateX(3700px) translateY(0);
   }
 }
 
@@ -18,13 +18,13 @@
   z-index: 100000;
   right: 0;
   top: 0;
-  width: 45vw;
+  width: 50vw;
   height: 300px;
   margin-top: 70px;
   cursor: e-resize;
 
   &:hover ~ .dynamic-elements {
-    transform: rotateY(0deg) translateX(-3700px) translateY(200px);
+    transform: rotateY(0deg) translateX(-3700px) translateY(0);
   }
 }
 
