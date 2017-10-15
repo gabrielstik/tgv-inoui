@@ -6,6 +6,8 @@ const train = document.querySelector('.dynamic-elements')
 const carriers = document.querySelectorAll('div[class^="catenary-carrier-"]')
 const controlLeft = document.querySelector('.move-left')
 const controlRight = document.querySelector('.move-right')
+const buy = document.querySelector('.buy')
+const audio = document.querySelector('audio')
 
 launch.addEventListener('click', () => {
   header.classList.add('disable')
@@ -19,4 +21,6 @@ launch.addEventListener('click', () => {
   train.classList.add('animation')
   controlLeft.classList.add('hide')
   controlRight.classList.add('hide')
+  buy.classList.add('can-buy')
+  audio.play();
 })

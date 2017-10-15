@@ -27,26 +27,3 @@
     transform: rotateY(0deg) translateX(-3700px) translateY(0);
   }
 }
-
-.launch {
-  text-align: center;
-
-  button {
-    border: 0;
-    border-radius: 5px;
-    padding: 15px;
-    background: $colorInoui;
-    color: white;
-    font-family: sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    box-shadow: 0px 3px 7px rgba(0,0,0,.4);
-    transition: box-shadow .2s ease, transform .2s ease;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(0.99);
-      box-shadow: 0px 3px 17px rgba(0,0,0,.4);
-    }
-  }
-}
