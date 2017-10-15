@@ -5,6 +5,7 @@
     width: 780px;
     height: 160px;
     transform-style: preserve-3d;
+    will-change: transform;
 
     &.couch-0 {
       transform: translateX(calc(720px * -5));
@@ -68,6 +69,7 @@
         height: 40px;
         width: 720px;
         background: var(--colorTrainRoof);
+        will-change: transform;
         transform: rotateX(80deg) translateZ(-113px) translateY(-14px);
 
         &.engine {
@@ -80,6 +82,7 @@
         height: 60px;
         background: var(--colorTrainLightGrey);
         border-right: solid 5px var(--colorTrainDarkGrey);
+        will-change: transform;
         transform: rotateX(10deg) translateZ(-10px);
 
         &.bar {
@@ -100,6 +103,7 @@
             width: 200px;
             height: 60px;
             background-color: var(--colorTrainLightGrey);
+            will-change: transform;
             transform: skew(60deg);
             border-radius: 0 40px;
           }
@@ -157,6 +161,7 @@
             width: 200px;
             height: 70px;
             background-color: var(--colorTrainLightGrey);
+            will-change: transform;
             transform: skew(60deg);
             border-radius: 0 0 100px 0;
           }
@@ -168,6 +173,7 @@
         height: 40px;
         background: var(--colorTrainLightGrey);
         border-right: solid 5px var(--colorTrainDarkGrey);
+        will-change: transform;
         transform: rotateX(-10deg) translateZ(-10px);
 
         &.engine {
@@ -182,6 +188,7 @@
             width: 200px;
             height: 40px;
             background-color: var(--colorTrainLightGrey);
+            will-change: transform;
             transform: skew(-60deg);
             border-radius: 100px 100px 100px 0;
           }
@@ -233,20 +240,6 @@
         width: 50px;
         background: var(--colorTrainDoor);
 
-        &.animation-off {
-          animation-name: doorToggle;
-          animation-duration: 2s;
-          animation-timing-function: ease-in-out;
-          animation-direction: alternate;
-          animation-iteration-count: infinite;
-
-          @keyframes doorToggle {
-            100% {
-              transform: translateX(50px) translateZ(2px);
-            }
-          }
-        }
-
         .door-window {
           height: 40px;
           width: 20px;
@@ -264,6 +257,7 @@
         width: 720px;
         height: 120px;
         background: var(--colorTrainShadow);
+        will-change: transform;
         transform: rotateX(-90deg) skew(-60deg);
         transform-origin: bottom;
         opacity: .5;
@@ -288,11 +282,13 @@
       width: 100px;
 
       &.returned {
+        will-change: transform;
         transform: scaleX(-1);
       }
     }
 
     .face-ns-1 {
+      will-change: transform;
       transform: rotateY(0) translateZ(50px);
 
       &.returned {
@@ -301,6 +297,7 @@
     }
 
     .face-ns-2 {
+      will-change: transform;
       transform: rotateY(180deg) translateZ(50px);
 
       &.returned {
@@ -314,6 +311,7 @@
       background: var(--colorTrainDarkGrey);
       border-left: solid 5px var(--colorInoui);
       border-right: solid 5px var(--colorInoui);
+      will-change: transform;
       transform-origin: top;
       transform: rotateZ(62deg) rotateY(90deg) translateZ(90px) translateY(-180px);
       border-radius: 60px 60px 0px 0px / 300px 300px 0px 0px;
@@ -378,6 +376,7 @@
       background: var(--colorTrainDarkGrey);
       border-left: solid 5px var(--colorInoui);
       border-right: solid 5px var(--colorInoui);
+      will-change: transform;
       transform-origin: top;
       transform: rotateZ(40deg) rotateY(90deg) translateZ(76px) translateY(50px);
       border-radius: 0px 0px 40px 40px;
@@ -400,6 +399,7 @@
         width: 40px;
         height: 60px;
         border: solid 5px var(--colorTrainPantograph);
+        will-change: transform;
         transform: rotateY(90deg) rotateX(45deg) translateY(-18px);
       }
 
@@ -407,6 +407,7 @@
         width: 40px;
         height: 60px;
         border: solid 5px var(--colorTrainPantograph);
+        will-change: transform;
         transform: rotateY(90deg) rotateX(-45deg)translateY(18px);
       }
     }
