@@ -1,6 +1,8 @@
+/* Decor elements: only catenary-carriers for now, tried its shadows but didn't worked aha */
+
 .decor {
 
-  .catenary-carriers {
+  .catenary-carriers { /* French: porte-caténaires */
 
     div[class^="catenary-carrier-"] {
       opacity: 0;
@@ -9,9 +11,9 @@
       top: -160px;
       width: 600px;
       height: 250px;
-      border-top: solid 5px $colorCatenaryCarrier;
-      border-left: solid 5px $colorCatenaryCarrier;
-      border-right: solid 5px $colorCatenaryCarrier;
+      border-top: solid 5px var(--colorCatenaryCarrier);
+      border-left: solid 5px var(--colorCatenaryCarrier);
+      border-right: solid 5px var(--colorCatenaryCarrier);
 
       &.animation {
         animation-name: catenaries;

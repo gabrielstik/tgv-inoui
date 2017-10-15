@@ -1,31 +1,21 @@
-$colorBackground: #eeeeee;
-
-$colorInoui: #b41446;
-
-$colorTrainWhite: #eeeeee;
-$colorTrainLightGrey: #dddddd;
-$colorTrainDarkGrey: #202020;
-$colorTrainBlue: #0000ff;
-$colorTrainGreen: #00ff00;
-$colorTrainWindow: linear-gradient(to bottom, #555555 0%,#dddddd 100%);
-$colorTrainDisplayBg: #101010;
-$colorTrainDisplayColor: #101010;
-$colorTrainRoof: #202020;
-$colorTrainDoor: linear-gradient(to bottom, #871464 0%, #b41446 50%, #871464 100%);
-$colorTrainShadow: linear-gradient(to bottom, rgba(0,0,0,.8) 0%, rgba(0,0,0,1) 100%);
-$colorTrainFrontLight: #ffffff;
-$colorTrainBackLight: #ff0000;
-$colorTrainPantograph: #202020;
-
-$colorGround: #28492c;
-$colorSky: linear-gradient(to bottom, #0a6ec8 0%, #aad7fa 50%);
-
-$colorBalast: #7c7062;
-$colorRails: #202020;
-
-$colorCatenaryCarrier: #202020;
-$colorCatenaryCarrierShadow: rgba(0,0,0,.5);
-
-$colorTachy: #202020;
-$colorTachyBackground: #dddddd;
-$colorTachyArrow: #ff0000;
+:root {
+  /* Main colors */
+  --colorBackground: #eeeeee;
+  --colorInoui: #b41446;
+  /* Train colors (see train.scss) */
+  --colorTrainWhite: #eeeeee;
+  --colorTrainLightGrey: #dddddd;
+  --colorTrainDarkGrey: #202020;
+  --colorTrainWindow: linear-gradient(to bottom, #555555 0%,#dddddd 100%);
+  --colorTrainRoof: #202020;
+  --colorTrainDoor: linear-gradient(to bottom, #871464 0%, #b41446 50%, #871464 100%);
+  --colorTrainShadow: linear-gradient(to bottom, rgba(0,0,0,.8) 0%, rgba(0,0,0,1) 100%);
+  --colorTrainFrontLight: #ffffff;
+  --colorTrainBackLight: #ff0000;
+  --colorTrainPantograph: #202020;
+  /* Background color (see background.scss) */
+  --colorGround: #28492c;
+  --colorSky: linear-gradient(to bottom, #0a6ec8 0%, #aad7fa 50%);
+  /* Decor color (see decor.scss) */
+  --colorCatenaryCarrier: #202020;
+}

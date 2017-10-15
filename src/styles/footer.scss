@@ -18,7 +18,7 @@ footer {
     cursor: pointer;
   
     [class^="bar-"] {
-      background: $colorBackground;
+      background: var(--colorBackground);
       display: inline-block;
       width: 18%;
       height: 100%;

@@ -67,7 +67,7 @@
         left: 0;
         height: 40px;
         width: 720px;
-        background: $colorTrainRoof;
+        background: var(--colorTrainRoof);
         transform: rotateX(80deg) translateZ(-113px) translateY(-14px);
 
         &.engine {
@@ -78,8 +78,8 @@
       .upper-floor {
         width: 100%;
         height: 60px;
-        background: $colorTrainLightGrey;
-        border-right: solid 5px $colorTrainDarkGrey;
+        background: var(--colorTrainLightGrey);
+        border-right: solid 5px var(--colorTrainDarkGrey);
         transform: rotateX(10deg) translateZ(-10px);
 
         &.bar {
@@ -99,7 +99,7 @@
             right: -100px;
             width: 200px;
             height: 60px;
-            background-color: $colorTrainLightGrey;
+            background-color: var(--colorTrainLightGrey);
             transform: skew(60deg);
             border-radius: 0 40px;
           }
@@ -109,8 +109,8 @@
       .lower-floor {
         width: 100%;
         height: 60px;
-        background: $colorTrainDarkGrey;
-        border-top: solid 5px $colorInoui;
+        background: var(--colorTrainDarkGrey);
+        border-top: solid 5px var(--colorInoui);
 
         .class {
           vertical-align: top;
@@ -129,7 +129,7 @@
           }
 
           .display {
-            background-color: $colorTrainDisplayBg;
+            background-color: var(--colorTrainDisplayBg);
             border-radius: 5px;
             width: 30px;
             height: 10px;
@@ -138,23 +138,10 @@
             margin-top: 10px;
             text-align: left;
             overflow: hidden;
-            color: $colorTrainDisplayColor;
+            color: var(--colorTrainDisplayColor);
 
             .sliding-text {
               width: 100px;
-
-              &.animation-off {
-                animation-name: slideText;
-                animation-duration: 7s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-
-                @keyframes slideText {
-                  100% {
-                    margin-left: calc(-200% - 40px);
-                  }
-                }
-              }
             }
           }
         }
@@ -169,7 +156,7 @@
             right: 64px;
             width: 200px;
             height: 70px;
-            background-color: $colorTrainLightGrey;
+            background-color: var(--colorTrainLightGrey);
             transform: skew(60deg);
             border-radius: 0 0 100px 0;
           }
@@ -179,8 +166,8 @@
       .under-floor {
         width: 100%;
         height: 40px;
-        background: $colorTrainLightGrey;
-        border-right: solid 5px $colorTrainDarkGrey;
+        background: var(--colorTrainLightGrey);
+        border-right: solid 5px var(--colorTrainDarkGrey);
         transform: rotateX(-10deg) translateZ(-10px);
 
         &.engine {
@@ -194,7 +181,7 @@
             right: -95px;
             width: 200px;
             height: 40px;
-            background-color: $colorTrainLightGrey;
+            background-color: var(--colorTrainLightGrey);
             transform: skew(-60deg);
             border-radius: 100px 100px 100px 0;
           }
@@ -207,7 +194,7 @@
         height: 30px;
         width: 60px;
         border-radius: 5px;
-        background: $colorTrainWindow;
+        background: var(--colorTrainWindow);
         
         &.small {
           width: 30px;
@@ -231,10 +218,10 @@
         position: absolute;
         height: 98px;
         width: 50px;
-        border: solid 2px $colorTrainLightGrey;
+        border: solid 2px var(--colorTrainLightGrey);
         bottom: 0;
         left: 580px;
-        background: $colorTrainDarkGrey;
+        background: var(--colorTrainDarkGrey);
       }
 
       .door {
@@ -244,7 +231,7 @@
         bottom: 0;
         height: 100px;
         width: 50px;
-        background: $colorTrainDoor;
+        background: var(--colorTrainDoor);
 
         &.animation-off {
           animation-name: doorToggle;
@@ -266,7 +253,7 @@
           margin-top: 20px;
           margin-left: 10px;
           border-radius: 5px;
-          background: $colorTrainWindow;
+          background: var(--colorTrainWindow);
         }
       }
 
@@ -276,7 +263,7 @@
         left: 0;
         width: 720px;
         height: 120px;
-        background: $colorTrainShadow;
+        background: var(--colorTrainShadow);
         transform: rotateX(-90deg) skew(-60deg);
         transform-origin: bottom;
         opacity: .5;
@@ -324,9 +311,9 @@
     .face-1-e {
       width: 90px;
       height: 200px;
-      background: $colorTrainDarkGrey;
-      border-left: solid 5px $colorInoui;
-      border-right: solid 5px $colorInoui;
+      background: var(--colorTrainDarkGrey);
+      border-left: solid 5px var(--colorInoui);
+      border-right: solid 5px var(--colorInoui);
       transform-origin: top;
       transform: rotateZ(62deg) rotateY(90deg) translateZ(90px) translateY(-180px);
       border-radius: 60px 60px 0px 0px / 300px 300px 0px 0px;
@@ -342,10 +329,10 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: $colorTrainFrontLight;
+        background: var(--colorTrainFrontLight);
 
         &.back {
-          background: $colorTrainBackLight;
+          background: var(--colorTrainBackLight);
         }
       }
 
@@ -362,7 +349,7 @@
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: $colorTrainFrontLight;
+          background: var(--colorTrainFrontLight);
         }
 
         &.back div {
@@ -370,7 +357,7 @@
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: $colorTrainBackLight;
+          background: var(--colorTrainBackLight);
         }
       }
 
@@ -381,16 +368,16 @@
         width: 60px;
         height: 80px;
         margin: auto;
-        background: $colorTrainWindow;
+        background: var(--colorTrainWindow);
       }
     }
 
     .face-2-e {
       width: 90px;
       height: 50px;
-      background: $colorTrainDarkGrey;
-      border-left: solid 5px $colorInoui;
-      border-right: solid 5px $colorInoui;
+      background: var(--colorTrainDarkGrey);
+      border-left: solid 5px var(--colorInoui);
+      border-right: solid 5px var(--colorInoui);
       transform-origin: top;
       transform: rotateZ(40deg) rotateY(90deg) translateZ(76px) translateY(50px);
       border-radius: 0px 0px 40px 40px;
@@ -412,14 +399,14 @@
       .lower-part {
         width: 40px;
         height: 60px;
-        border: solid 5px $colorTrainPantograph;
+        border: solid 5px var(--colorTrainPantograph);
         transform: rotateY(90deg) rotateX(45deg) translateY(-18px);
       }
 
       .upper-part {
         width: 40px;
         height: 60px;
-        border: solid 5px $colorTrainPantograph;
+        border: solid 5px var(--colorTrainPantograph);
         transform: rotateY(90deg) rotateX(-45deg)translateY(18px);
       }
     }

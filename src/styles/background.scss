@@ -1,3 +1,5 @@
+/* Background is non-dynamic */
+
 .background {
   position: absolute;
   z-index: -10;
@@ -9,11 +11,11 @@
 
   .sky {
     height: 150px;
-    background: $colorSky;
+    background: var(--colorSky);
   }
 
   .ground {
     height: calc(100% - 150px);
-    background: $colorGround;
+    background: var(--colorGround);
   }
 }
