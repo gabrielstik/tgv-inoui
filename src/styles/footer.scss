@@ -1,5 +1,66 @@
 footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
   width: 100vw;
-  height: 30px;
-  padding: 5% 5%;
+  height: 50px;
+  padding: 30px 5%;
+
+  .equalizer {
+    opacity: 0;
+    position: absolute;
+    left: 90vw;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    cursor: pointer;
+  
+    [class^="bar-"] {
+      background: $colorBackground;
+      display: inline-block;
+      width: 18%;
+      height: 100%;
+      margin: 0 1%;
+      animation: equalizer-boom .75s infinite backwards;
+      will-change: transform;
+
+      &.paused {
+        animation-play-state: paused;
+      }
+  
+      &.bar-1 {
+        animation-delay: .4s;
+      }
+      
+      &.bar-2 {
+        animation-delay: .6s;
+      }
+      
+      &.bar-3 {
+        animation-delay: 0s;
+      }
+      
+      &.bar-4 {
+        animation-delay: .2s;
+      }
+      
+      &.bar-5 {
+        animation-delay: .8s;
+      }
+    }
+  
+    @keyframes equalizer-boom{
+      0% {
+        transform: scaleY(.2);
+      }
+      10% {
+        transform: scaleY(1);
+      }
+      100% {
+        transform: scaleY(.2);
+      }
+    }
+  }
 }

@@ -1,17 +1,22 @@
 const launch = document.querySelector('.launch button')
+const equalizer = document.querySelector('.equalizer')
+const equalizerBars = document.querySelectorAll('.equalizer [class^="bar-"]')
+
 const header = document.querySelector('header')
-const footer = document.querySelector('footer')
+const sncfLogo = document.querySelector('footer img')
 const background = document.querySelector('.background')
 const train = document.querySelector('.dynamic-elements')
 const carriers = document.querySelectorAll('div[class^="catenary-carrier-"]')
-const controlLeft = document.querySelector('.move-left')
-const controlRight = document.querySelector('.move-right')
+const moveLeft = document.querySelector('.action-move-left')
+const moveRight = document.querySelector('.action-move-right')
 const buy = document.querySelector('.buy')
+
 const audio = document.querySelector('audio')
+let audioPlaying = true
 
 launch.addEventListener('click', () => {
   header.classList.add('disable')
-  footer.classList.add('disable')
+  sncfLogo.classList.add('disable')
   launch.classList.add('disable')
   background.classList.add('enable')
   carriers.forEach(carrier => {
@@ -19,8 +24,23 @@ launch.addEventListener('click', () => {
     carrier.classList.add('animation')
   })
   train.classList.add('animation')
-  controlLeft.classList.add('hide')
-  controlRight.classList.add('hide')
+  moveLeft.classList.add('hide')
+  moveRight.classList.add('hide')
   buy.classList.add('can-buy')
+  equalizer.classList.add('enable');
   audio.play();
+})
+
+equalizer.addEventListener('click', () => {
+  if (audioPlaying == true) {
+    audioPlaying = false
+    audio.pause()
+  }
+  else {
+    audio.play()
+    audioPlaying = true
+  }
+  equalizerBars.forEach(equalizerBar => {
+    equalizerBar.classList.toggle('paused')
+  })
 })

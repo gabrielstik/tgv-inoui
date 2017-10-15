@@ -16,8 +16,6 @@ body {
       top: 50%;
       left: 50%;
       transform-style: preserve-3d;
-      /* mano modifs */
-      transform: rotateY(0deg) translateX(0) translateY(0);
       transition: transform 10s linear;
       
       &.animation {
@@ -130,4 +128,8 @@ button, a {
 
 .hide {
   display: none;
+}
+
+.disp {
+  display: block !important;
 }

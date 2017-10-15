@@ -1,0 +1,26 @@
+[class^="action-move-"] {
+  position: absolute;
+  z-index: 100000;
+  top: 0;
+  width: 50vw;
+  height: 300px;
+  margin-top: 70px;
+
+  &.action-move-left {
+    left: 0;
+    cursor: w-resize;
+
+    &:hover ~ .dynamic-elements {
+      transform: rotateY(0deg) translateX(3700px) translateY(0);
+    }
+  }
+
+  &.action-move-right {
+    right: 0;
+    cursor: e-resize;
+
+    &:hover ~ .dynamic-elements {
+      transform: rotateY(0deg) translateX(-3700px) translateY(0);
+    }
+  }
+}
