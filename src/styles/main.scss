@@ -6,10 +6,11 @@ body {
   section.view {
     position: relative;
     perspective: 800px;
+    margin-bottom: 450px;
 
     .dynamic-elements {
-      height: 5px;
-      width: 5px;
+      height: 1px;
+      width: 1px;
       position: absolute;
       top: 50%;
       left: 50%;
