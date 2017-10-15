@@ -16,8 +16,8 @@ let audioPlaying = true
 
 launch.addEventListener('click', () => {
   header.classList.add('disable')
-  sncfLogo.classList.add('disable')
-  launch.classList.add('disable')
+  sncfLogo.classList.add('hide')
+  launch.classList.add('hide')
   background.classList.add('enable')
   carriers.forEach(carrier => {
     carrier.classList.add('actives')
