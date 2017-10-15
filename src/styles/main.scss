@@ -15,6 +15,10 @@ body {
     position: relative;
     perspective: 800px;
     margin-bottom: 450px;
+    
+    @media #{$mobile} {
+      margin-bottom: 270px;
+    }
 
     .dynamic-elements {
       height: 1px;
@@ -25,6 +29,10 @@ body {
       left: 50%;
       transform-style: preserve-3d;
       transition: transform 10s linear;
+
+      @media #{$mobile} {
+        margin-top: 100px;
+      }
       
       &.animation {
         animation-name: rotateTrain;
@@ -58,6 +66,10 @@ body {
   padding: 20px 20px 40px 20px;
   background: var(--colorBackground);
   box-shadow: 0px 2px 7px rgba(0,0,0,.5);
+
+  @media #{$mobile} {
+    width: calc(90% - 40px);
+  }
 
   h1 {
     font-family: sans-serif;
