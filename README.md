@@ -19,8 +19,7 @@ I had to use
 * More rounded shapes
 
 ## Run
-
-The operational version of the website is in _dist_ directory.
+You can directly run the operational version of the website which is in _dist_ directory.
 
 ### Task runner
 This project was made with the help of Gulp & my own [static-template](https://github.com/gabrielstik/static-template).
